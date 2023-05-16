@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>929</width>
+    <width>931</width>
     <height>611</height>
    </rect>
   </property>
@@ -34,7 +34,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QListView" name="listView"/>
+        <widget class="QListWidget" name="listWidget"/>
        </item>
        <item>
         <layout class="QFormLayout" name="formLayout">
@@ -83,28 +83,28 @@
        <item>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="addButton">
            <property name="text">
             <string>Add</string>
            </property>
           </widget>
          </item>
          <item row="0" column="2">
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="UpdateButton">
            <property name="text">
             <string>Update</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="deleteButton">
            <property name="text">
             <string>Delete</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="FilterButton">
            <property name="text">
             <string>Filter</string>
            </property>
@@ -115,7 +115,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="Button_Next_in_Playlist">
        <property name="text">
         <string>&gt;</string>
        </property>
@@ -131,19 +131,19 @@
         </widget>
        </item>
        <item>
-        <widget class="QListView" name="listView_2"/>
+        <widget class="QListWidget" name="playlist"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <widget class="QPushButton" name="pushButton_5">
+          <widget class="QPushButton" name="playButton">
            <property name="text">
             <string>Play</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_6">
+          <widget class="QPushButton" name="nextButton">
            <property name="text">
             <string>Next</string>
            </property>
@@ -161,7 +161,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>929</width>
+     <width>931</width>
      <height>26</height>
     </rect>
    </property>

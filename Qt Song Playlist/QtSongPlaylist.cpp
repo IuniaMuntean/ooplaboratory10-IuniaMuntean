@@ -10,7 +10,7 @@ QtSongPlaylist::QtSongPlaylist(QWidget *parent)
     QObject::connect(ui.FilterButton, SIGNAL(clicked()), this, SLOT(on_UpdateButton_clicked()));
 
     QObject::connect(ui.addButton, SIGNAL(clicked()), this, SLOT(on_addButton_clicked()));
-    QObject:connect(ui.DeleteButton, SIGNAL(clicked()), this, SLOT(on_deleteButton_clicked()));
+    QObject:connect(ui.deleteButton, SIGNAL(clicked()), this, SLOT(on_deleteButton_clicked()));
     
     QObject::connect(ui.Button_Next_in_Playlist, SIGNAL(clicked()), this, SLOT(on_Next_in_Playlist_clicked()));
 }
