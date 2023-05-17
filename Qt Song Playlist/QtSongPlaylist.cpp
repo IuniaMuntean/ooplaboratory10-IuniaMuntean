@@ -19,8 +19,11 @@ QtSongPlaylist::~QtSongPlaylist()
 {}
 
 void QtSongPlaylist::on_deleteButton_clicked() {
-    QListWidgetItem* itm = ui.listWidget->currentItem();
-    ui.listWidget->takeItem(ui.listWidget->row(itm));
+   if(ui.listWidget->currentRow() != -1) {
+        QListWidgetItem* it = ui.listWidget->takeItem(ui.listWidget->currentRow());
+        delete it;
+        ui.listWidget->setCurrentRow(-1);
+    }
 }
 
 void QtSongPlaylist::on_UpdateButton_clicked() {
