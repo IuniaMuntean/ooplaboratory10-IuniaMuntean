@@ -6,152 +6,221 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>931</width>
-    <height>611</height>
+    <width>960</width>
+    <height>897</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>19</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>QtSongPlaylist</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>30</y>
-      <width>801</width>
-      <height>481</height>
+      <x>10</x>
+      <y>40</y>
+      <width>931</width>
+      <height>791</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>All Songs</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QListWidget" name="listWidget"/>
-       </item>
-       <item>
-        <layout class="QFormLayout" name="formLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="titleLabel">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label">
            <property name="text">
-            <string>Title:</string>
+            <string>All Songs</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="titleLineEdit"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="artistLabel">
-           <property name="text">
-            <string>Artist: </string>
+         <item>
+          <widget class="QListWidget" name="listWidget">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>16</width>
+             <height>0</height>
+            </size>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="artistLineEdit"/>
+         <item>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="titleLabel">
+             <property name="text">
+              <string>Title:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="titleLineEdit"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="artistLabel">
+             <property name="text">
+              <string>Artist: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="artistLineEdit"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="yearLabel">
+             <property name="text">
+              <string>Year</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="yearLineEdit"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="linkLabel">
+             <property name="text">
+              <string>Link:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="linkLineEdit"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="lirycsLabel">
+             <property name="text">
+              <string>Lyrics:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QTextEdit" name="LyricsEdit"/>
+           </item>
+          </layout>
          </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="durationLabel">
-           <property name="text">
-            <string>Duration:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="durationLineEdit"/>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="linkLabel">
-           <property name="text">
-            <string>Link:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="linkLineEdit"/>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="2">
+            <widget class="QPushButton" name="LyricsButton">
+             <property name="text">
+              <string>View Lyrics</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="addButton">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="sortByArtistsButton">
+             <property name="text">
+              <string>Sort Songs by Artists</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QPushButton" name="SortbyTitleButton">
+             <property name="text">
+              <string>Sort Songs by Title</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="deleteButton">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="addButton">
+        <widget class="QPushButton" name="Button_Next_in_Playlist">
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>Add</string>
+            <string>Playlist</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="UpdateButton">
-           <property name="text">
-            <string>Update</string>
-           </property>
-          </widget>
+         <item>
+          <widget class="QListWidget" name="playlist"/>
          </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="deleteButton">
-           <property name="text">
-            <string>Delete</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="FilterButton">
-           <property name="text">
-            <string>Filter</string>
-           </property>
-          </widget>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QPushButton" name="RandomiseButton">
+             <property name="text">
+              <string>Randomise</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="PlaylistDeleteButton">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="Button_Next_in_Playlist">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="playButton">
        <property name="text">
-        <string>&gt;</string>
+        <string>Start Playlist</string>
        </property>
       </widget>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Playlist</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QListWidget" name="playlist"/>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <widget class="QPushButton" name="playButton">
-           <property name="text">
-            <string>Play</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="nextButton">
-           <property name="text">
-            <string>Next</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
      </item>
     </layout>
    </widget>
@@ -161,7 +230,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>931</width>
+     <width>960</width>
      <height>26</height>
     </rect>
    </property>

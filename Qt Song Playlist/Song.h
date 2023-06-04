@@ -1,29 +1,44 @@
 #pragma once
+#include <iostream>
 #include <string>
+#include <vector>
+#include <cstring>
+#include <exception>
 
 class Song
 {
 private:
-	std::string m_title, m_artist, m_link;
-	float m_duration;
-
+	std::string m_artist;
+	std::string m_title;
+	std::string m_year;
+	std::string m_url;
+protected:
+	std::vector<std::string> m_lyrics;
 public:
-	Song();
-	Song(std::string, std::string, std::string, float);
+	Song() = default;
+	Song(std::string, std::string, std::string, std::string, std::string);
+	std::string getArtist() const;
+	std::string getTitle() const;
+	std::string getYear() const;
+	std::string getUrl() const;
+	std::vector<std::string> getLyrics() const;
 
-	Song& operator=(const Song& other);
+	bool operator==(const Song& other);
 
-	Song(const Song& other); // copy constructor
+	std::string toString();
 
-	std::string getTitle();
-	std::string getArtist();
-	std::string getLink();
-	float getDuration();
-
-	void setTitle(std::string);
-	void setArtist(std::string);
-	void setLink(std::string);
-	void setDuration(float);
+	//friend std::ostream& operator<<(std::ostream& os, Song s);
 
 };
 
+class SongException : public std::exception
+{
+public:
+	SongException(std::string msg) 
+		: std::exception(msg.c_str()) {}
+
+	/*friend std::ostream& operator<<(std::ostream& os, SongException e) {
+		os << e.what();
+		return os;
+	}*/
+};
